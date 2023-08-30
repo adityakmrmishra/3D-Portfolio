@@ -14,7 +14,7 @@ echo > .nojekyll
 
 
 
-git init --config
+git init
 git checkout -B main
 git add -A
 git commit -m 'deploy'
@@ -23,4 +23,4 @@ git commit -m 'deploy'
 git push -f git@github.com:adityakmrmishra/3D-Portfolio.git main:gh-pages
 
 
-cd-
+cd -
