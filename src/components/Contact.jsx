@@ -83,11 +83,11 @@ const Contact = () => {
             name='number'
             value="9719167690"
             placeholder="9719167690"
+            readOnly
             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
           />
           </label>
 
-        {/* <p className = {styles.sectionSubText}>WhatsApp Number :- 9719167690</p> */}
 
         <h3 className = {` ${styles.sectionHeadText}  text-center `} text-center >or</h3>
 

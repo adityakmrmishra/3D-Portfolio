@@ -42,6 +42,8 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        {/* small screen */}
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
@@ -52,7 +54,7 @@ const Navbar = () => {
                     <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-1 my-1 min-w-[140px] z-10 rounded-xl`}
+            } p-6 purple-gradient absolute top-20 right-0 mx-1 my-1 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (

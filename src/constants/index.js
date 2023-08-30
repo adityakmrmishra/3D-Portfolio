@@ -20,6 +20,7 @@ import {
     threejs,
 } from "../assets";
 
+
 export const navLinks = [
     {
         id: "about",
@@ -123,19 +124,11 @@ const experiences = [
 const testimonials = [
     {
         testimonial:
-            "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-        name: "Sara Lee",
-        designation: "CFO",
-        company: "Acme Co",
-        image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-        testimonial:
-            "I've never met a web developer who truly cares about their clients' success like Rick does.",
-        name: "Chris Brown",
-        designation: "COO",
-        company: "DEF Corp",
-        image: "https://randomuser.me/api/portraits/men/5.jpg",
+            "I've never met a designer who truly cares about their clients' success like Aditya does.",
+        name: "Aman Sharma",
+        designation: "owner",
+        company: "Wedding stories",
+        image: "https://randomuser.me/api/portraits/lego/4.jpg",
     },
     
 ];
