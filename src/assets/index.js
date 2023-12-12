@@ -7,6 +7,9 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import hero from "./hero.png";
+import hero2 from "./Hero (2).png";
+
 import ssoc from "./company/ssoc.png";
 import gssoc from "./company/gssoc.png";
 
@@ -36,6 +39,8 @@ import ws from "./ws.jpg";
 export {
   logo,
   backend,
+  hero,
+  hero2,
   creator,
   mobile,
   web,

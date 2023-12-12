@@ -89,7 +89,7 @@ const Contact = () => {
           </label>
 
 
-        <h3 className = {` ${styles.sectionHeadText}  text-center `} text-center >or</h3>
+        <h3 className = {` ${styles.sectionHeadText}  text-center `}  >or</h3>
 
         <form 
         ref={formRef}
