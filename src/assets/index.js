@@ -4,6 +4,7 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import forwarding from "./forwarding.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -12,6 +13,7 @@ import hero2 from "./Hero (2).png";
 
 import ssoc from "./company/ssoc.png";
 import gssoc from "./company/gssoc.png";
+import infixra from "./company/infixra.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -29,6 +31,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import farmhub from "./farmhub.png";
+import infixrra from "./infixrra.png";
 import geet from "./geet.png";
 import cafe from "./cafe.png";
 import ws from "./ws.jpg";
@@ -45,6 +48,7 @@ export {
   mobile,
   web,
   github,
+  forwarding,
   menu,
   close,
   css,
@@ -63,7 +67,9 @@ export {
   threejs,
   ssoc,
   gssoc,
+  infixra,
   farmhub,
+  infixrra,
   geet,
   cafe,
   ws,

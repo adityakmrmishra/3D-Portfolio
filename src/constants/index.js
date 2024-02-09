@@ -13,8 +13,10 @@ import {
     figma,
     ssoc,
     gssoc,
+    infixra,
     geet,
     farmhub,
+    infixrra,
     cafe,
     ws,
     threejs,
@@ -119,6 +121,22 @@ const experiences = [
             "Fixed a bug in Games-and-Go website (Issue no. #668  and P.r. no. #719)"
         ],
     },
+    {
+        title: "Freelance Full Stack Developer",
+        company_name: "Infixra",
+        icon: infixra, 
+        iconBg: "#E6DEDD",
+        date: "Oct 2023 - present",
+        points: [
+            "Developed and implemented a comprehensive full-stack website for Infixra, specializing in construction, architecture, and interior design.",
+            "Designed and implemented user-friendly interfaces for seamless navigation and optimal user experience.",
+            "Utilized a full stack of technologies, including HTML, CSS, JavaScript, Node.js, Express.js, React.js, and MongoDB, to create a dynamic and responsive web application.",
+            "Implemented secure authentication and authorization features to protect user data and ensure a safe online environment.",
+            "Collaborated with the Infixra team to understand project requirements and deliver solutions that align with the company's vision and goals.",
+            "Regularly updated and maintained the website to ensure its functionality and compatibility with the latest web standards.",
+        ],
+    }
+    
 ];
 
 const testimonials = [
@@ -158,6 +176,39 @@ const projects = [
         ],
         image: farmhub,
         source_code_link: "https://github.com/FarmHubb/FarmHub",
+    },
+    {
+        name: "Infixra",
+        description: "Infixra is a comprehensive online platform at the intersection of construction, architecture, and interior design. It serves as a one-stop solution, offering a diverse range of services and information. From project insights to industry trends, Infixra is your go-to source for everything related to the built environment.",
+        tags: [
+            {
+                name: "html",
+                color: "orange-text",
+            },
+            {
+                name: "css",
+                color: "blue-text",
+            },
+            {
+                name: "javascript",
+                color: "yellow-text",
+            },
+            {
+                name: "react",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "node",
+                color: "green-text-gradient",
+            },
+            {
+                name: "tailwind css",
+                color: "text-yellow-300",
+            },
+            
+        ],
+        image: infixrra, 
+        site_link: "https://infixra.in/", 
     },
     {
         name: "Geet",

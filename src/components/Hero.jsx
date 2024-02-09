@@ -20,7 +20,7 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Aditya</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a <span className='text-[#915eFF]'>Frontend Developer</span> <br/> <span className='text-[#915eFF]'>UI/UX Designer</span> and <br className='sm:hidden block'/>  <span className='text-[#915eFF]'>Graphic Designer </span>
+            I'm a <span className='text-[#915eFF]'>Web Developer</span> <br/> <span className='text-[#915eFF]'>UI/UX Designer</span> and <br className='sm:hidden block'/>  <span className='text-[#915eFF]'>Graphic Designer </span>
           </p>
         </div>
       </div>
