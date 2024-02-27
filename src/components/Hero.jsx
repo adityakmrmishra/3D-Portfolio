@@ -30,8 +30,8 @@ const Hero = () => {
       {!isMobile ? (
         <ComputersCanvas />
       ) : (
-        <div className="sketchfab-embed-wrapper  flex flex-row justify-center items-center w h-[130%] ">
-        <img src={hero2}/>
+        <div className="sketchfab-embed-wrapper absolute top-[50%]  flex flex-row justify-center items-center   ">
+        <img src={hero2} />
           </div>
       )}
 
