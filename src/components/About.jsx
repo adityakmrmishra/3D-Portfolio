@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-      Web developer with a keen interest in building web applications and in leading development teams utilizing Scrum, Agile, and Lean methodologies, knowledgeable about creating software that provides logical and mathematical solutions to business difficulties, devoted to fostering innovation, monitoring technical and industry trends, and facilitating early adoption of innovations.
+      A freelance full-stack developer passionate about crafting digital solutions that bring ideas to life. With expertise in both frontend and backend development, I specialize in creating tailored websites and applications that exceed client expectations. Let's collaborate and turn your vision into reality!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
