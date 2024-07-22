@@ -2,7 +2,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Works, StarsCanvas } from "./components";
 
 const App = ()=> {
   const isMobile = useMediaQuery({ maxWidth: 425 });
@@ -15,7 +15,6 @@ const App = ()=> {
         </div>
         <About />
         <Experience />
-        {!isMobile && <Tech />}
         <Works />
         <Feedbacks />
         <div className='relative z-0'>

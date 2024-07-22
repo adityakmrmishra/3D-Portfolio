@@ -47,10 +47,6 @@ const services = [
         title: "Web Developer",
         icon: web,
     },
-    {
-        title: "Graphic Designer",
-        icon: creator,
-    },
 ];
 
 const technologies = [
@@ -102,35 +98,11 @@ const technologies = [
 
 const experiences = [
     {
-        title: "Open Source",
-        company_name: "Social Summer Of Code Season 2",
-        icon: ssoc,
-        iconBg: "#383E56",
-        date: "June 1 2023 - July 31 2023",
-        points: [
-            "Developed a web applications using React.js nmaed 'Magic Notes' used to  create notes for the Project named 'Future.WebNet (Issue no. #400 and P.r. no. #415).'",
-            "Developed a web Game using HTML, CSS and JavaScript nmaed 'Snake Game' for the Project named 'Future.WebNet (Issue no. #346 and P.r. no. #373).'",
-            
-            
-        ],
-    },
-    {
-        title: "Open Source",
-        company_name: "GirlScript Summer of Code",
-        icon: gssoc,
-        iconBg: "#E6DEDD",
-        date: "May 2023 - Aug 2023",
-        points: [
-            "Made Data Science named Website responsive for diffrent device sizes (Issue no. #703  and P.r. no. #716).",
-            "Fixed a bug in Games-and-Go website (Issue no. #668  and P.r. no. #719)"
-        ],
-    },
-    {
         title: "Freelance Full Stack Developer",
         company_name: "Infixra",
         icon: infixra, 
         iconBg: "#E6DEDD",
-        date: "Oct 2023 - present",
+        date: "Oct 2023 - Jan 2024",
         points: [
             "Developed and implemented a comprehensive full-stack website for Infixra, specializing in construction, architecture, and interior design.",
             "Designed and implemented user-friendly interfaces for seamless navigation and optimal user experience.",
@@ -146,7 +118,7 @@ const experiences = [
 const testimonials = [
     {
         testimonial:
-            "I've never met a designer who truly cares about their clients' success like Aditya does.",
+            "I've never met a designer who truly cares about their clients' success like Devora does.",
         name: "Aman Sharma",
         designation: "owner",
         company: "Wedding stories",
