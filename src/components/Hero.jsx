@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
 import { hero ,hero2} from "../assets";
 
 
@@ -16,7 +17,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`sm: ${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Devora</span>
+            Hi, I'm <span className='text-[#915EFF]'>Aditya</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a <span className='text-[#915eFF]'>Full stack Developer</span> <br/> <span className='text-[#915eFF]'>UI/UX Designer</span> and <br className='sm:hidden block'/>  <span className='text-[#915eFF]'>Graphic Designer </span>
@@ -25,18 +26,18 @@ const Hero = () => {
       </div>
       
   
-      {/* 3d laptop setup
+      {/* 3d laptop setup */}
       {!isMobile ? (
         <ComputersCanvas />
       ) : (
         <div className="sketchfab-embed-wrapper absolute top-[50%]  flex flex-row justify-center items-center   ">
         <img src={hero2} />
           </div>
-      )} */}
+      )}
 
 
       <div className='absolute xs:bottom-5 bottom-32  w-full flex justify-center items-center'>
-        <a href="#projects" >
+        <a href="#about" >
           <div className='w-[2rem] h-[4rem] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 '>
           <motion.div
               animate={{
