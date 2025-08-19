@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,15 +11,16 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import PropTypes from "prop-types";
 
 
 const ExperienceCard =({experience})=>(
   <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "#181818",
         color: "#fff",
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid  #181818" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -52,9 +53,19 @@ const ExperienceCard =({experience})=>(
           </li>
         ))}
       </ul>
-      
     </VerticalTimelineElement>
 )
+
+ExperienceCard.propTypes = {
+  experience: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    iconBg: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    company_name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    points: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+};
 
 const Experience = () => {
   return (
@@ -79,4 +90,5 @@ const Experience = () => {
   )
 }
 
-export default SectionWrapper(Experience , 'work')
+const WrappedExperience = SectionWrapper(Experience, 'work');
+export default WrappedExperience;

@@ -1,4 +1,3 @@
-import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -6,10 +5,10 @@ import { styles } from "../styles";
 import { github ,forwarding} from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+
+import PropTypes from "prop-types";
 
 const ProjectCard = ({
-  index,
   name,
   description,
   tags,
@@ -25,7 +24,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full'
+        className='bg-black-100 p-5 rounded-2xl sm:w-[360px] w-full h-full'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -85,6 +84,21 @@ const ProjectCard = ({
   );
 };
 
+ProjectCard.propTypes = {
+  index: PropTypes.number,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      color: PropTypes.string
+    })
+  ).isRequired,
+  image: PropTypes.string,
+  source_code_link: PropTypes.string,
+  site_link: PropTypes.string
+};
+
 const Works = () => {
   return (
     <>
@@ -115,4 +129,5 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "projects");
+const WrappedWorks = SectionWrapper(Works, "projects");
+export default WrappedWorks;

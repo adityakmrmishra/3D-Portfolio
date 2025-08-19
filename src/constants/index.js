@@ -1,5 +1,5 @@
 import {
-    creator,
+    // creator,
     web,
     javascript,
     html,
@@ -14,12 +14,20 @@ import {
     ssoc,
     gssoc,
     infixra,
-    geet,
-    farmhub,
+    // geet,
+    // farmhub,
     infixrra,
-    cafe,
-    ws,
+    // cafe,
+    // ws,
     threejs,
+    top,
+    BPOE,
+    NGO_SUPPORT,
+    eagle,
+    twc,
+    eagleLogo,
+    bpoe,
+    nextjs,
 } from "../assets";
 
 
@@ -47,10 +55,10 @@ const services = [
         title: "Web Developer",
         icon: web,
     },
-    {
-        title: "Graphic Designer",
-        icon: creator,
-    },
+    // {
+    //     title: "Graphic Designer",
+    //     icon: creator,
+    // },
 ];
 
 const technologies = [
@@ -77,6 +85,10 @@ const technologies = [
     {
         name: "React JS",
         icon: reactjs,
+    },
+    {
+        name: "Next JS",
+        icon: nextjs,
     },
     {
         name: "Node JS",
@@ -110,8 +122,8 @@ const experiences = [
         points: [
             "Developed a web applications using React.js nmaed 'Magic Notes' used to  create notes for the Project named 'Future.WebNet (Issue no. #400 and P.r. no. #415).'",
             "Developed a web Game using HTML, CSS and JavaScript nmaed 'Snake Game' for the Project named 'Future.WebNet (Issue no. #346 and P.r. no. #373).'",
-            
-            
+
+
         ],
     },
     {
@@ -127,20 +139,85 @@ const experiences = [
     },
     {
         title: "Freelance Full Stack Developer",
-        company_name: "Infixra",
-        icon: infixra, 
+        company_name: "INFIXRA",
+        icon: infixra,
         iconBg: "#E6DEDD",
-        date: "Oct 2023 - present",
+        date: "October 2023 - December 2023, India",
         points: [
-            "Developed and implemented a comprehensive full-stack website for Infixra, specializing in construction, architecture, and interior design.",
-            "Designed and implemented user-friendly interfaces for seamless navigation and optimal user experience.",
-            "Utilized a full stack of technologies, including HTML, CSS, JavaScript, Node.js, Express.js, React.js, and MongoDB, to create a dynamic and responsive web application.",
-            "Implemented secure authentication and authorization features to protect user data and ensure a safe online environment.",
-            "Collaborated with the Infixra team to understand project requirements and deliver solutions that align with the company's vision and goals.",
-            "Regularly updated and maintained the website to ensure its functionality and compatibility with the latest web standards.",
+            "Execute end-to-end development using MongoDB, Express.js, React.js, and Node.js.",
+            "Engineered custom APIs to efficiently handle real-time data processing, resulting in a 25% increase in application performance.",
+            "Facilitate seamless communication between customers, architects, and engineers to ensure alignment on project objectives, leading to a 30% reduction in development cycle times and enhanced client satisfaction.",
+            "Implement responsive designs and interactive interfaces for improved user engagement.",
         ],
-    }
+    },
     
+    {
+        title: "Freelance Full Stack Developer",
+        company_name: "BASANT PYROLYSIS OIL ENTERPRISES",
+        icon: bpoe,
+        iconBg: "#E6DEDD",
+        date: "Feb 2024 - Mar 2024",
+        points: [
+            "Developed a comprehensive platform for the oil industry, streamlining business operations.",
+            "Designed and implemented user-friendly interfaces for seamless navigation and optimal user experience.",
+            "Utilized React, Node.js, and MongoDB for dynamic and responsive web applications.",
+            "Collaborated with stakeholders to deliver tailored solutions for the oil sector.",
+        ],
+    },
+    {
+        title: "Freelance Full Stack Developer",
+        company_name: "NGO SUPPORT",
+        icon: web,
+        iconBg: "#E6DEDD",
+        date: "Nov 2024 - Dec 2024, Netherland",
+        points: [
+            "Engineered a platform providing solar energy solutions to 50+ underprivileged communities.",
+            "Designed an interface that helped power 100+ schools & medical facilities, improving access to electricity.",
+            "Ensured accessibility by implementing a fully responsive design, increasing engagement by 45%.",
+            "Leveraged modern web tech, boosting site performance by 60% for a seamless user experience.",
+        ],
+    },
+    {
+        title: "Freelance Full Stack Developer",
+        company_name: "Top Window Covering",
+        icon: twc,
+        iconBg: "#E6DEDD",
+        date: "Nov 2024 - July 2025, Netherland",
+        points: [
+            "Developed an e-commerce platform for 10,000+ window covering products, improving online sales by 35%.",
+            "Implemented a product showcase with detailed specs & pricing, reducing customer inquiries by 25%.",
+            "Optimized UI/UX, leading to a 40% increase in mobile conversions.",
+            "Built a responsive design, ensuring 99% compatibility across all devices.",
+        ],
+    },
+    {
+        title: "Freelance Full Stack Developer",
+        company_name: "The Eagle Marketing",
+        icon: eagleLogo,
+        iconBg: "#E6DEDD",
+    date: "May 2025 - Jun 2025, India, Maharashtra",
+        points: [
+            "Developed and maintained the main website for The Eagle Marketing.",
+            "Implemented marketing tools and analytics integration.",
+            "Enhanced user experience and lead generation features.",
+            "Website: https://www.theeaglemarketing.in/"
+        ],
+    },
+    {
+        title: "Freelance Full Stack Developer",
+        company_name: "CRM The Eagle Marketing",
+        icon: eagleLogo,
+        iconBg: "#E6DEDD",
+    date: "Jun 2025 - Jul 2025, India, Maharashtra",
+        points: [
+            "Developed and maintained the CRM platform for The Eagle Marketing.",
+            "Integrated customer management and reporting features.",
+            "Improved workflow automation and data visualization.",
+            "Website: https://crm.theeaglemarketing.in/"
+        ],
+    },
+ 
+
 ];
 
 const testimonials = [
@@ -152,119 +229,92 @@ const testimonials = [
         company: "Wedding stories",
         image: "https://randomuser.me/api/portraits/lego/4.jpg",
     },
-    
+
 ];
 
 const projects = [
+
     {
-        name: "FarmHub",
-        description:
-            "Web-based platform that allows farmers to search crop information according to seasons, buy fertilizers,pestisides,crop tonic etc.from various providers, providing a convenient and efficient solution for agriculture needs.It's a amazon for FARMERS",
+        name: "Top Window Covering",
+        description: "Outlet for premium window coverings and treatments.",
         tags: [
-            {
-                name: "mongodb",
-                color: "green-text-gradient",
-            },
-            {
-                name: "express",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "react",
-                color: "text-red-700",
-            },
-            {
-                name: "node",
-                color: "green-text-gradient",
-            },
+            { name: "MERN Stack", color: "blue-text-gradient" }
         ],
-        image: farmhub,
-        source_code_link: "https://github.com/FarmHubb/FarmHub",
+        image: top,
+        site_link: "https://www.topwindowcoveringoutlet.com/",
     },
+    {
+        name: "The Eagle Marketing",
+        description: "Main website for The Eagle Marketing, featuring marketing tools, analytics, and lead generation.",
+        tags: [
+            { name: "Next.js", color: "blue-text-gradient" }
+        ],
+        image: eagle,
+        site_link: "https://www.theeaglemarketing.in/",
+    },
+    {
+        name: "CRM The Eagle Marketing",
+        description: "CRM platform for The Eagle Marketing, with customer management, reporting, and workflow automation.",
+        tags: [
+            { name: "Next.js", color: "blue-text-gradient" }
+        ],
+        image: web,
+        site_link: "https://crm.theeaglemarketing.in/",
+    },
+    {
+        name: "NGO_SUPPORT",
+        description: "Sustainable electrical solutions for safe, efficient, and eco-friendly infrastructure globally.",
+        tags: [
+            { name: "MERN Stack", color: "blue-text-gradient" }
+        ],
+        image: NGO_SUPPORT,
+        site_link: "https://www.ngo-support.com/",
+    },
+    {
+        name: "BASANT PYROLYSIS OIL ENTERPRISES",
+        description: "An all-inclusive platform for the oil industry.",
+        tags: [
+            { name: "react", color: "blue-text-gradient" },
+        ],
+        image: BPOE,
+        site_link: "https://basantpyrolysis.com/",
+    },
+
     {
         name: "Infixra",
         description: "Infixra is a comprehensive online platform at the intersection of construction, architecture, and interior design. It serves as a one-stop solution, offering a diverse range of services and information. From project insights to industry trends, Infixra is your go-to source for everything related to the built environment.",
         tags: [
-            {
-                name: "html",
-                color: "orange-text",
-            },
-            {
-                name: "css",
-                color: "blue-text",
-            },
-            {
-                name: "javascript",
-                color: "yellow-text",
-            },
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "node",
-                color: "green-text-gradient",
-            },
-            {
-                name: "tailwind css",
-                color: "text-yellow-300",
-            },
-            
+            { name: "MERN Stack", color: "blue-text-gradient" }
         ],
-        image: infixrra, 
-        site_link: "https://infixra.in/", 
+        image: infixrra,
+        site_link: "https://infixra.in/",
     },
-    {
-        name: "Geet",
-        description:
-            "Web application that enables users to listen and musics, it contains limited songs . ",
-        tags: [
-            {
-                name: "html",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "css",
-                color: "green-text-gradient",
-            },
-            {
-                name: "javascript",
-                color: "text-yellow-300",
-            },
-        ],
-        image: geet,
-        source_code_link: "https://github.com/adityakmrmishra/Geet",
-    },
-    {
-        name: "The Freinds Zone Cafe banner",
-        description:
-        "It is a cafe opening banner designed for  a client. ",
-        tags: [
-            {
-                name: "Adobe express",
-                color: "text-red-700",
-            },
-        ],
-        image: cafe,
-        source_code_link: "https://github.com/adityakmrmishra/graphic-designing-work/blob/main/Banners/cafe.png",
-    },
-    {
-        name: "Business Card",
-        description:
-        "It is a wedding stories named company business card designed for a client. ",
-        tags: [
-            {
-                name: "Adobe express",
-                color: "text-red-700",
-            },
-            {
-                name: "Canva",
-                color: "blue-text-gradient",
-            },
-        ],
-        image: ws,
-        source_code_link: "https://github.com/adityakmrmishra/graphic-designing-work/tree/main/Business%20cards/Wedding%20Stories",
-    },
+    // {
+    //     name: "FarmHub",
+    //     description:
+    //         "Web-based platform that allows farmers to search crop information according to seasons, buy fertilizers,pestisides,crop tonic etc.from various providers, providing a convenient and efficient solution for agriculture needs.It's a amazon for FARMERS",
+    //     tags: [
+    //         {
+    //             name: "mongodb",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "express",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "react",
+    //             color: "text-red-700",
+    //         },
+    //         {
+    //             name: "node",
+    //             color: "green-text-gradient",
+    //         },
+    //     ],
+    //     image: farmhub,
+    //     source_code_link: "https://github.com/FarmHubb/FarmHub",
+    // },
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };
