@@ -223,11 +223,43 @@ const experiences = [
 const testimonials = [
     {
         testimonial:
-            "I've never met a designer who truly cares about their clients' success like Aditya does.",
-        name: "Aman Sharma",
-        designation: "owner",
-        company: "Wedding stories",
+            "Aditya delivered a robust MERN stack platform for our window covering business, boosting our online sales and customer satisfaction!",
+        name: "Simon",
+        designation: "Co-Founder",
+        company: "Leeuwstudio",
         image: "https://randomuser.me/api/portraits/lego/4.jpg",
+    },
+    {
+        testimonial:
+            "The Next.js website and CRm for The Eagle Marketing exceeded our expectations in performance and lead generation. Highly recommended!",
+        name: "Umar Musa",
+        designation: "Owner",
+        company: "The Eagle Marketing",
+        image: "https://randomuser.me/api/portraits/lego/3.jpg",
+    },
+    {
+        testimonial:
+            "Aditya's MERN stack solution brought solar energy to our communities. The platform is fast, reliable, and user-friendly.",
+        name: "Jelte",
+        designation: "Co-Founder",
+        company: "Leeuwstudio",
+        image: "https://randomuser.me/api/portraits/lego/5.jpg",
+    },
+    {
+        testimonial:
+            "The oil industry platform Aditya built is modern, scalable, and easy to use. Excellent work!",
+        name: "Ubaid",
+        designation: "Owner",
+        company: "BPOE",
+        image: "https://randomuser.me/api/portraits/lego/2.jpg",
+    },
+    {
+        testimonial:
+            "Infixra's web platform is now a leader in our industry, thanks to Aditya's MERN stack expertise and attention to detail.",
+        name: "Karan Sagar",
+        designation: "Owner",
+        company: "Infixra",
+        image: "https://randomuser.me/api/portraits/lego/5.jpg",
     },
 
 ];
@@ -258,7 +290,7 @@ const projects = [
         tags: [
             { name: "Next.js", color: "blue-text-gradient" }
         ],
-        image: web,
+        image: eagleLogo,
         site_link: "https://crm.theeaglemarketing.in/",
     },
     {
