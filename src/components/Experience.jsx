@@ -10,43 +10,15 @@ import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-
+import { textVariant } from "../utils/motion";
 import PropTypes from "prop-types";
 
-
-// Render a point string but convert any http(s) URLs into clickable links
-const renderPointText = (text) => {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  return text.split(urlRegex).map((part, idx) => {
-    if (/^https?:\/\//.test(part)) {
-      return (
-        <a
-          key={idx}
-          href={part}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-400 underline break-words"
-        >
-          {part}
-        </a>
-      );
-    }
-    return <span key={idx}>{part}</span>;
-  });
-};
 
 const ExperienceCard =({experience})=>(
   <VerticalTimelineElement
       contentStyle={{
         background: "#181818",
         color: "#fff",
-        // prevent horizontal overflow and allow long words to wrap inside the card
-        overflowX: 'hidden',
-        whiteSpace: 'normal',
-        overflowWrap: 'break-word',
-        wordBreak: 'break-word',
-        // allow the content box to shrink in flex layouts
-        minWidth: 0,
       }}
       contentArrowStyle={{ borderRight: "7px solid  #181818" }}
       date={experience.date}
@@ -62,9 +34,9 @@ const ExperienceCard =({experience})=>(
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold break-words'>{experience.title}</h3>
+        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
-          className='text-secondary text-[16px] font-semibold break-words'
+          className='text-secondary text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -75,10 +47,9 @@ const ExperienceCard =({experience})=>(
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            // ensure long words or links wrap instead of causing horizontal overflow
-            className='text-white-100 text-[14px] pl-1 tracking-wider break-words whitespace-normal'
+            className='text-white-100 text-[14px] pl-1 tracking-wider'
           >
-            {renderPointText(point)}
+            {point}
           </li>
         ))}
       </ul>
@@ -99,7 +70,7 @@ ExperienceCard.propTypes = {
 const Experience = () => {
   return (
     <>
-      <motion.div>
+      <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>
           What I have done so far
         </p>

@@ -200,7 +200,6 @@ const experiences = [
             "Developed and maintained the main website for The Eagle Marketing.",
             "Implemented marketing tools and analytics integration.",
             "Enhanced user experience and lead generation features.",
-            "Website: https://www.theeaglemarketing.in/"
         ],
     },
     {
@@ -213,7 +212,6 @@ const experiences = [
             "Developed and maintained the CRM platform for The Eagle Marketing.",
             "Integrated customer management and reporting features.",
             "Improved workflow automation and data visualization.",
-            "Website: https://crm.theeaglemarketing.in/"
         ],
     },
  
@@ -276,6 +274,15 @@ const projects = [
         site_link: "https://www.topwindowcoveringoutlet.com/",
     },
     {
+        name: "NGO_SUPPORT",
+        description: "Sustainable electrical solutions for safe, efficient, and eco-friendly infrastructure globally.",
+        tags: [
+            { name: "MERN Stack", color: "blue-text-gradient" }
+        ],
+        image: NGO_SUPPORT,
+        site_link: "https://www.ngo-support.com/",
+    },
+    {
         name: "The Eagle Marketing",
         description: "Main website for The Eagle Marketing, featuring marketing tools, analytics, and lead generation.",
         tags: [
@@ -292,15 +299,6 @@ const projects = [
         ],
         image: eagleLogo,
         site_link: "https://crm.theeaglemarketing.in/",
-    },
-    {
-        name: "NGO_SUPPORT",
-        description: "Sustainable electrical solutions for safe, efficient, and eco-friendly infrastructure globally.",
-        tags: [
-            { name: "MERN Stack", color: "blue-text-gradient" }
-        ],
-        image: NGO_SUPPORT,
-        site_link: "https://www.ngo-support.com/",
     },
     {
         name: "BASANT PYROLYSIS OIL ENTERPRISES",

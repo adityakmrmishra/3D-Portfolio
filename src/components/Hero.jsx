@@ -116,12 +116,7 @@ const Hero = () => {
             >
               Get In Touch
             </a>
-            <a
-              href="#about"
-              className="text-white/80 px-6 py-3 rounded-lg border border-white/20 hover:border-white/40 transition-colors"
-            >
-              Learn More
-            </a>
+            
           </motion.div>
 
           

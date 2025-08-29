@@ -89,16 +89,16 @@ const Contact = () => {
             </svg>
             <span className="sr-only">LinkedIn page</span>
           </a>
-
+{/* 
           <a href="https://twitter.com/adityakmrmishra" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
             <svg className="w-14 h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
               <path fillRule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clipRule="evenodd" />
             </svg>
             <span className="sr-only">Twitter page</span>
-          </a>
+          </a> */}
 
 
-          <a href="https://www.instagram.com/adityamishra842/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+          {/* <a href="https://www.instagram.com/adityamishra842/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
             <svg
               viewBox="0 0 1024 1024"
               fill="currentColor"
@@ -108,7 +108,7 @@ const Contact = () => {
             </svg>
 
             <span className="sr-only">Instagram page</span>
-          </a>
+          </a> */}
 
 
           <a href="https://github.com/adityakmrmishra" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
@@ -117,30 +117,29 @@ const Contact = () => {
             </svg>
             <span className="sr-only">GitHub account</span>
           </a>
+
+          <a href="mailto:adityaakmrmishra@gmail.com" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+            <svg className="w-14 h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+              <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+              <path d="M11.241 9.817c-.36.075-.704.15-1.041.15-.337 0-.68-.075-1.041-.15L0 1.616V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V1.816l-8.759 7.801Z"/>
+            </svg>
+            <span className="sr-only">Email</span>
+          </a>
+
+          <a href="https://wa.me/9719167690" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+            <svg className="w-14 h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 0 1-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+            </svg>
+            <span className="sr-only">WhatsApp</span>
+          </a>
         </div>
-
-        <h3 className={` ${styles.sectionHeadText}  text-center `}  >or</h3>
-
-        <label className="flex flex-col mt-3">
-          <span className="text-white font-medium mb-4"> My WhatsApp Number</span>
-          <input
-            type='text'
-            name='number'
-            value="9719167690"
-            placeholder="9719167690"
-            readOnly
-            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
-          />
-        </label>
-
-        
 
         <h3 className={` ${styles.sectionHeadText}  text-center `}  >or</h3>
 
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-5 flex flex-col gap-8'>
+          className='mt-5 flex flex-col gap-8'>                                                           
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
