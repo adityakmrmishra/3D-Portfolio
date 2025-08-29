@@ -2,7 +2,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 // import ParticlesBg from "./components/background/particleBg";
 
 const App = ()=> {
@@ -15,7 +15,7 @@ const App = ()=> {
           <Hero />
           
         </div>
-        <About />
+        {/* <About /> */}
         <Experience />
         {!isMobile && <Tech />}
         <Works />

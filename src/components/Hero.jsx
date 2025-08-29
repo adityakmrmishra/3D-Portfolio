@@ -1,85 +1,151 @@
 import { motion } from "framer-motion";
-// import { useMediaQuery } from "react-responsive";
+import { useEffect, useRef } from "react";
 import { styles } from "../styles";
-// import { ComputersCanvas } from "./canvas";
-// import { hero ,hero2} from "../assets";
-
 
 const Hero = () => {
-  // const isMobile = useMediaQuery({ maxWidth: 425 });
-  return (
-    <section className="relative w-full h-[100vh] mx-auto overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 z-0 animate-gradient bg-primary opacity-80"></div>
-  <div className={`${styles.paddingX}  z-10 absolute inset-0 top-[5.5rem] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
-        <div className="flex flex-col justify-center items-center mt-5">
-          {/* Glowing animated accent */}
-          <motion.div
-            initial={{ boxShadow: "0 0 0px #565656" }}
-            animate={{ boxShadow: [
-              "0 0 20px 5px #565656",
-              "0 0 40px 10px #232323",
-              "0 0 20px 5px #565656"
-            ] }}
-            transition={{ duration: 2, repeat: Infinity, repeatType: "loop" }}
-            className="w-5 h-5 rounded-full bg-tertiary"
-          />
-          <div className="w-1 sm:h-80 h-40 bg-black-200"/>
-        </div>
+  const vantaRef = useRef(null);
+  const vantaEffect = useRef(null);
 
-        <div>
+  useEffect(() => {
+    if (!vantaEffect.current) {
+      vantaEffect.current = window.VANTA.NET({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x565656, // tertiary color from theme
+        backgroundColor: 0x0a0a0a, // primary color from theme
+        points: 12.0,
+        maxDistance: 20.0,
+        spacing: 18.0,
+      });
+    }
+
+    return () => {
+      if (vantaEffect.current) {
+        vantaEffect.current.destroy();
+        vantaEffect.current = null;
+      }
+    };
+  }, []);
+
+  return (
+    <section
+      ref={vantaRef}
+      id="vanta-bg"
+      className="relative w-full min-h-screen mx-auto overflow-hidden flex items-center"
+    >
+      <div className={`${styles.paddingX} relative z-10 max-w-7xl mx-auto w-full`}>
+        <div className="flex flex-col items-center justify-center text-center">
+        
+
+          {/* Main heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className={`sm: ${styles.heroHeadText} text-secondary`}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className={`${styles.heroHeadText} text-secondary mt-20 `}
           >
-            Hi, I&apos;m <span className='text-tertiary'>Aditya</span>
+            Hi, I&apos;m <span className="text-tertiary">Aditya</span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
+
+          {/* Subtitle */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, delay: 0.5 }}
-            className={`${styles.heroSubText} mt-2 text-white-100`}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className={`${styles.sectionHeadText} text-white mb-6`}
           >
-            I&apos;m a <span className='text-tertiary'>Full stack Developer</span> <br/>
-            {/* <span className='text-tertiary'>UI/UX Designer</span> and 
-            <br className='sm:hidden block'/>
-            <span className='text-tertiary'>Graphic Designer </span> */}
+            Full Stack Developer
+          </motion.h2>
+
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="text-secondary text-lg max-w-2xl leading-relaxed mb-8"
+          >
+            A passionate freelance developer specializing in creating digital
+            solutions that transform ideas into reality. I craft responsive web
+            applications and interactive experiences with modern technologies,
+            focusing on clean code, user experience, and scalable architecture.
           </motion.p>
+
+          {/* Key highlights */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-3xl"
+          >
+            <div className="bg-black-100/50 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+              <h3 className="text-tertiary font-semibold mb-2">Frontend</h3>
+              <p className="text-white-100 text-sm">
+                Modern web development with responsive design
+              </p>
+            </div>
+            <div className="bg-black-100/50 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+              <h3 className="text-tertiary font-semibold mb-2">Backend</h3>
+              <p className="text-white-100 text-sm">
+                Server-side development and database management
+              </p>
+            </div>
+          </motion.div>
+
+          {/* CTA buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="flex flex-wrap gap-4 justify-center mb-12"
+          >
+            <a
+              href="#projects"
+              className="bg-tertiary text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:opacity-95 transition-opacity"
+            >
+              View My Work
+            </a>
+            <a
+              href="#contact"
+              className="border border-tertiary text-tertiary px-6 py-3 rounded-lg hover:bg-tertiary/10 transition-colors"
+            >
+              Get In Touch
+            </a>
+            <a
+              href="#about"
+              className="text-white/80 px-6 py-3 rounded-lg border border-white/20 hover:border-white/40 transition-colors"
+            >
+              Learn More
+            </a>
+          </motion.div>
+
+          
         </div>
       </div>
-      
-  
-      {/* 3d laptop setup */}
-      {/* {!isMobile ? (
-        <ComputersCanvas />
-      ) : (
-        <div className="sketchfab-embed-wrapper absolute top-[50%]  flex flex-row justify-center items-center   ">
-        <img src={hero2} />
-          </div>
-      )} */}
 
-
-      <div className='absolute xs:bottom-5 bottom-32 w-full flex justify-center items-center z-10'>
-        <a href="#about" >
-          <div className='w-[2rem] h-[4rem] rounded-3xl border-4 border-tertiary flex justify-center items-start p-2 bg-black-100 bg-opacity-60 backdrop-blur-md'>
+      {/* Scroll hint */}
+      <div className="hidden  absolute bottom-0  w-full md:flex justify-center items-center z-10">
+        <a href="#work">
+          <div className="w-[2rem] h-[3rem] rounded-3xl border-4 border-tertiary flex justify-center items-start p-2 bg-black-100 bg-opacity-60 backdrop-blur-md">
             <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
+              animate={{ y: [0, 10, 0] }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className='w-3 h-3 rounded-full bg-tertiary mb-1 shadow-lg'
+              className="w-3 h-3 rounded-full bg-tertiary mb-1 shadow-lg"
             />
           </div>
         </a>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
