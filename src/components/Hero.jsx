@@ -50,7 +50,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className={`${styles.heroHeadText} text-secondary mt-20 `}
           >
-            Hi, I&apos;m <span className="text-tertiary">Aditya</span>
+            Hi, I&apos;m <span className="text-tertiary">Aditya Mishra</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -60,7 +60,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className={`${styles.sectionHeadText} text-white mb-6`}
           >
-            Full Stack Developer
+            Freelance Full Stack Developer
           </motion.h2>
 
           {/* Description */}
@@ -70,10 +70,10 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.6 }}
             className="text-secondary text-lg max-w-2xl leading-relaxed mb-8"
           >
-            A passionate freelance developer specializing in creating digital
-            solutions that transform ideas into reality. I craft responsive web
-            applications and interactive experiences with modern technologies,
-            focusing on clean code, user experience, and scalable architecture.
+            I specialize in building scalable web applications using the MERN stack
+            and Next.js. With 2+ years of experience delivering projects for clients
+            across India and the Netherlands, I&apos;ve successfully launched e-commerce
+            platforms, CRM systems, and business solutions that drive real results.
           </motion.p>
 
           {/* Key highlights */}
@@ -84,15 +84,17 @@ const Hero = () => {
             className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-3xl"
           >
             <div className="bg-black-100/50 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-              <h3 className="text-tertiary font-semibold mb-2">Frontend</h3>
+              <h3 className="text-tertiary font-semibold mb-2">MERN Stack Development</h3>
               <p className="text-white-100 text-sm">
-                Modern web development with responsive design
+                MongoDB, Express.js, React.js, Node.js - Building full-stack applications
+                for e-commerce, CRM, and business platforms with real-world impact.
               </p>
             </div>
             <div className="bg-black-100/50 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-              <h3 className="text-tertiary font-semibold mb-2">Backend</h3>
+              <h3 className="text-tertiary font-semibold mb-2">Next.js & Modern Web</h3>
               <p className="text-white-100 text-sm">
-                Server-side development and database management
+                Server-side rendering, SEO optimization, and scalable architectures
+                for high-performance web applications and marketing platforms.
               </p>
             </div>
           </motion.div>
@@ -108,13 +110,13 @@ const Hero = () => {
               href="#projects"
               className="bg-tertiary text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:opacity-95 transition-opacity"
             >
-              View My Work
+              View My Projects
             </a>
             <a
               href="#contact"
               className="border border-tertiary text-tertiary px-6 py-3 rounded-lg hover:bg-tertiary/10 transition-colors"
             >
-              Get In Touch
+              Start a Project
             </a>
             
           </motion.div>
