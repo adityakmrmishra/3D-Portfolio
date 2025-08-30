@@ -60,7 +60,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className={`${styles.sectionHeadText} text-white mb-6`}
           >
-            Freelance Full Stack Developer
+            Full Stack Developer
           </motion.h2>
 
           {/* Description */}
