@@ -77,7 +77,7 @@ const Hero = () => {
           </motion.p>
 
           {/* Key highlights */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -97,7 +97,7 @@ const Hero = () => {
                 for high-performance web applications and marketing platforms.
               </p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* CTA buttons */}
           <motion.div
@@ -126,11 +126,11 @@ const Hero = () => {
       </div>
 
       {/* Scroll hint */}
-      <div className="hidden  absolute bottom-0  w-full md:flex justify-center items-center z-10">
+      <div className="hidden  absolute bottom-5  w-full md:flex justify-center items-center z-10">
         <a href="#work">
           <div className="w-[2rem] h-[3rem] rounded-3xl border-4 border-tertiary flex justify-center items-start p-2 bg-black-100 bg-opacity-60 backdrop-blur-md">
             <motion.div
-              animate={{ y: [0, 10, 0] }}
+              animate={{ y: [0, 18, 0] }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
