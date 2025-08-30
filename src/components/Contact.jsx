@@ -70,20 +70,20 @@ const Contact = () => {
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex  overflow-hidden ">
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="w-full bg-black-100 p-8 rounded-2xl"
+        className="w-full bg-black-100 p-4 sm:p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
 
-        <div className="flex mt-5 mb-5 justify-evenly ">
+        <div className="flex flex-row mt-5 mb-5 justify-around items-center ">
 
 
-          <a href="https://www.linkedin.com/in/adityakmrmishra/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+          <a href="https://www.linkedin.com/in/adityakmrmishra/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
             <svg
               viewBox="0 0 1024 1024"
               fill="currentColor"
-              className="w-14 h-14"
+              className="w-10 h-10 sm:w-14 sm:h-14"
             >
               <path fillRule="evenodd" d="M847.7 112H176.3c-35.5 0-64.3 28.8-64.3 64.3v671.4c0 35.5 28.8 64.3 64.3 64.3h671.4c35.5 0 64.3-28.8 64.3-64.3V176.3c0-35.5-28.8-64.3-64.3-64.3zm0 736c-447.8-.1-671.7-.2-671.7-.3.1-447.8.2-671.7.3-671.7 447.8.1 671.7.2 671.7.3-.1 447.8-.2 671.7-.3 671.7zM230.6 411.9h118.7v381.8H230.6zm59.4-52.2c37.9 0 68.8-30.8 68.8-68.8a68.8 68.8 0 10-137.6 0c-.1 38 30.7 68.8 68.8 68.8zm252.3 245.1c0-49.8 9.5-98 71.2-98 60.8 0 61.7 56.9 61.7 101.2v185.7h118.6V584.3c0-102.8-22.2-181.9-142.3-181.9-57.7 0-96.4 31.7-112.3 61.7h-1.6v-52.2H423.7v381.8h118.6V604.8z" clipRule="evenodd"/>
             </svg>
@@ -111,23 +111,23 @@ const Contact = () => {
           </a> */}
 
 
-          <a href="https://github.com/adityakmrmishra" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-            <svg className="w-14 h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <a href="https://github.com/adityakmrmishra" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg className="w-10 h-10 sm:w-14 sm:h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clipRule="evenodd" />
             </svg>
             <span className="sr-only">GitHub account</span>
           </a>
 
-          <a href="mailto:adityaakmrmishra@gmail.com" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-            <svg className="w-14 h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+          <a href="mailto:adityaakmrmishra@gmail.com" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg className="w-10 h-10 sm:w-14 sm:h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
               <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
               <path d="M11.241 9.817c-.36.075-.704.15-1.041.15-.337 0-.68-.075-1.041-.15L0 1.616V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V1.816l-8.759 7.801Z"/>
             </svg>
             <span className="sr-only">Email</span>
           </a>
 
-          <a href="https://wa.me/9719167690" className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-            <svg className="w-14 h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <a href="https://wa.me/9719167690" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+            <svg className="w-10 h-10 sm:w-14 sm:h-14" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 0 1-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
             </svg>
             <span className="sr-only">WhatsApp</span>
@@ -139,7 +139,7 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-5 flex flex-col gap-8'>                                                           
+          className='mt-5 flex flex-col gap-4 sm:gap-8'>                                                           
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -148,7 +148,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              className="bg-tertiary py-3 px-4 sm:py-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
@@ -159,7 +159,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              className="bg-tertiary py-3 px-4 sm:py-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
@@ -170,13 +170,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              className="bg-tertiary py-3 px-4 sm:py-4 sm:px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
+            className='bg-tertiary py-2 px-6 sm:py-3 sm:px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
           >
             {loading ? "Sending..." : "Send"}
           </button>
