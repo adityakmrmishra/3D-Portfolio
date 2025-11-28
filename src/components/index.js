@@ -7,6 +7,7 @@ import Experience from './Experience';
 import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
+import SiteLoader from './SiteLoader';
 
 export {
   Hero,
@@ -17,6 +18,7 @@ export {
   Works,
   Feedbacks,
   Contact,
+  SiteLoader,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 

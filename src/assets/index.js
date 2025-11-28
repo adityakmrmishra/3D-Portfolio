@@ -1,4 +1,5 @@
 import logo from "./logo.png";
+import aditya from "../../public/adityaDp.jpg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -36,6 +37,7 @@ import threejs from "./tech/threejs.svg";
 
 
 import NGO_SUPPORT from "./ngo_support.png";
+import Home1st from "./home1st.png";
 import BPOE from "./bpoe.png";
 import top from "./top.png";
 import eagle from "./eagle.png";
@@ -50,6 +52,7 @@ import ws from "./ws.jpg";
 
 export {
   logo,
+  aditya,
   backend,
   hero,
   hero2,
@@ -85,6 +88,7 @@ export {
   ws,
   top,
   NGO_SUPPORT,
+  Home1st,
   BPOE,
   eagle,
   twc,

@@ -2,13 +2,14 @@
 import { BrowserRouter } from "react-router-dom";
 // import { useMediaQuery } from "react-responsive";
 
-import { Contact, Experience, Feedbacks, Hero, Navbar, Works, StarsCanvas } from "./components";
+import { Contact, Experience, Feedbacks, Hero, Navbar, SiteLoader, Works, StarsCanvas } from "./components";
 // import ParticlesBg from "./components/background/particleBg";
 
 const App = ()=> {
   // const isMobile = useMediaQuery({ maxWidth: 425 });
   return (
     <BrowserRouter>
+      <SiteLoader />
       <div className='relative z-0 bg-primary '>
         <div className=''>
           <Navbar />

@@ -22,8 +22,9 @@ import {
     threejs,
     top,
     BPOE,
-    NGO_SUPPORT,
-    eagle,
+    Home1st,
+    // NGO_SUPPORT,
+    // eagle,
     twc,
     eagleLogo,
     bpoe,
@@ -270,32 +271,42 @@ const projects = [
         site_link: "https://www.topwindowcoveringoutlet.com/",
     },
     {
-        name: "NGO_SUPPORT",
-        description: "Sustainable electrical solutions for safe, efficient, and eco-friendly infrastructure globally.",
+        name: "Home1st",
+        description: "",
         tags: [
-            { name: "MERN Stack", color: "blue-text-gradient" }
+            { name: "Next.js", color: "blue-text-gradient" },
+            { name: "Django", color: "blue-text-gradient" }
         ],
-        image: NGO_SUPPORT,
-        site_link: "https://www.ngo-support.com/",
+        image: Home1st,
+        site_link: "https://hom1st.com/",
     },
-    {
-        name: "The Eagle Marketing",
-        description: "Main website for The Eagle Marketing, featuring marketing tools, analytics, and lead generation.",
-        tags: [
-            { name: "Next.js", color: "blue-text-gradient" }
-        ],
-        image: eagle,
-        site_link: "https://www.theeaglemarketing.in/",
-    },
-    {
-        name: "CRM The Eagle Marketing",
-        description: "CRM platform for The Eagle Marketing, with customer management, reporting, and workflow automation.",
-        tags: [
-            { name: "Next.js", color: "blue-text-gradient" }
-        ],
-        image: eagleLogo,
-        site_link: "https://crm.theeaglemarketing.in/",
-    },
+    // {
+    //     name: "NGO_SUPPORT",
+    //     description: "Sustainable electrical solutions for safe, efficient, and eco-friendly infrastructure globally.",
+    //     tags: [
+    //         { name: "MERN Stack", color: "blue-text-gradient" }
+    //     ],
+    //     image: NGO_SUPPORT,
+    //     site_link: "https://www.ngo-support.com/",
+    // },
+    // {
+    //     name: "The Eagle Marketing",
+    //     description: "Main website for The Eagle Marketing, featuring marketing tools, analytics, and lead generation.",
+    //     tags: [
+    //         { name: "Next.js", color: "blue-text-gradient" }
+    //     ],
+    //     image: eagle,
+    //     site_link: "https://www.theeaglemarketing.in/",
+    // },
+    // {
+    //     name: "CRM The Eagle Marketing",
+    //     description: "CRM platform for The Eagle Marketing, with customer management, reporting, and workflow automation.",
+    //     tags: [
+    //         { name: "Next.js", color: "blue-text-gradient" }
+    //     ],
+    //     image: eagleLogo,
+    //     site_link: "https://crm.theeaglemarketing.in/",
+    // },
     {
         name: "BASANT PYROLYSIS OIL ENTERPRISES",
         description: "An all-inclusive platform for the oil industry.",
@@ -313,7 +324,7 @@ const projects = [
             { name: "MERN Stack", color: "blue-text-gradient" }
         ],
         image: infixrra,
-        site_link: "https://infixra.in/",
+        site_link: "https://infixra.vercel.app/",
     },
     // {
     //     name: "FarmHub",
