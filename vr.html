@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VR Furniture Walkthrough – Room + Door + Hotspots</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-extras@7.4.0/dist/aframe-extras.min.js"></script>
+  <style>
+    .hud { position: fixed; inset: 16px auto auto 16px; padding: 8px 10px; border-radius: 8px;
+           background: rgba(0,0,0,0.6); color: #fff; font-family: system-ui, sans-serif; z-index: 10; }
+    .menu { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+            background: rgba(255,255,255,0.95); padding: 10px; border-radius: 10px;
+            display: none; gap: 8px; z-index: 20; }
+    .menu button { padding: 6px 12px; border: none; border-radius: 6px;
+                   background: #444; color: #fff; cursor: pointer; }
+    .menu button:hover { background: #222; }
+  </style>
+</head>
+<body>
+  <div class="hud">WASD to move • Mouse to look • Click hotspot to change finish • Click door to open/close</div>
+
+  <!-- Dynamic menu -->
+  <div id="finishMenu" class="menu"></div>
+
+  <a-scene renderer="colorManagement: true; physicallyCorrectLights: true" background="color: #dfe6ea">
+    <!-- Lights -->
+    <a-entity light="type: ambient; intensity: 0.5"></a-entity>
+    <a-entity light="type: directional; intensity: 0.9" position="2 6 3"></a-entity>
+
+    <!-- Floor -->
+    <a-plane rotation="-90 0 0" width="18" height="12" color="#e9ecef"></a-plane>
+
+    <!-- Walls -->
+    <a-box position="0 2 -6" depth="0.1" height="4" width="18" color="#f5f7fa"></a-box>
+    <a-box position="-9 2 0" rotation="0 90 0" depth="0.1" height="4" width="12" color="#f5f7fa"></a-box>
+    <a-box position="9 2 0" rotation="0 90 0" depth="0.1" height="4" width="12" color="#f5f7fa"></a-box>
+
+    <!-- Roof -->
+    <a-plane rotation="90 0 0" width="18" height="12" color="#f5f7fa" position="0 4 0"></a-plane>
+
+    <!-- Front Wall with Door -->
+    <!-- Left part -->
+    <a-box position="-6 2 6" depth="0.1" height="4" width="6" color="#f5f7fa"></a-box>
+    <!-- Right part -->
+    <a-box position="6 2 6" depth="0.1" height="4" width="6" color="#f5f7fa"></a-box>
+    <!-- Above door -->
+    <a-box position="0 3.2 6" depth="0.1" height="1.6" width="6" color="#f5f7fa"></a-box>
+
+    <!-- Interactive Door -->
+    <a-box id="door" position="0 1 6" depth="0.05" height="2" width="4" color="#7a5230" door-listener>
+      <a-text value="Click to Open/Close" align="center" width="3" color="#fff" position="0 1.2 0.1"></a-text>
+    </a-box>
+
+    <!-- Sofa -->
+    <a-entity id="sofa" position="-2 0.45 -3"
+              geometry="primitive: box; width: 2.4; height: 0.9; depth: 1.1"
+              material="color: #8b6f47">
+      <a-text value="Sofa – ₹25,000" align="center" width="2" color="#fff" position="0 0.8 0"></a-text>
+      <a-sphere class="hotspot" position="0 1 0" radius="0.08" color="#ff4444" opacity="0.8"></a-sphere>
+    </a-entity>
+
+    <!-- Table -->
+    <a-entity id="table" position="2.2 0.35 -2.4"
+              geometry="primitive: box; width: 1.6; height: 0.3; depth: 0.9"
+              material="color: #6b4f2d">
+      <a-text value="Table – ₹15,000" align="center" width="2" color="#fff" position="0 0.5 0"></a-text>
+      <a-sphere class="hotspot" position="0 0.6 0" radius="0.08" color="#ff4444" opacity="0.8"></a-sphere>
+    </a-entity>
+
+    <!-- Almira -->
+    <a-entity id="almirah" position="4.5 1 -4"
+              geometry="primitive: box; width: 1.2; height: 2; depth: 0.7"
+              material="color: #b99272">
+      <a-text value="Almirah – ₹30,000" align="center" width="2.5" color="#fff" position="0 1.2 0"></a-text>
+      <a-sphere class="hotspot" position="0 1.6 0" radius="0.08" color="#ff4444" opacity="0.8"></a-sphere>
+    </a-entity>
+
+    <!-- Camera rig -->
+    <a-entity id="rig" position="0 1.6 2" movement-controls="fly: false">
+      <a-entity camera look-controls wasd-controls="acceleration: 30">
+        <a-cursor fuse="false"></a-cursor>
+      </a-entity>
+    </a-entity>
+
+    <a-sky color="#f8fbff"></a-sky>
+  </a-scene>
+
+  <script>
+    // Finish changer
+    const menu = document.getElementById('finishMenu');
+    const finishes = {
+      sofa: [
+        {name: 'Light Wood', color: '#d7b899'},
+        {name: 'Dark Wood', color: '#5a3825'},
+        {name: 'White Surmica', color: '#f5f5f5'}
+      ],
+      table: [
+        {name: 'Light Wood', color: '#deb887'},
+        {name: 'Dark Wood', color: '#4b2e20'},
+        {name: 'Black', color: '#222222'}
+      ],
+      almirah: [
+        {name: 'Brown', color: '#b99272'},
+        {name: 'Grey', color: '#aaaaaa'},
+        {name: 'Black Matte', color: '#333333'}
+      ]
+    };
+
+    document.querySelectorAll('.hotspot').forEach(h => {
+      h.addEventListener('click', (e) => {
+        const parent = e.target.parentNode;
+        const id = parent.getAttribute('id');
+        openMenu(id);
+      });
+    });
+
+    function openMenu(id){
+      menu.innerHTML = '';
+      finishes[id].forEach(finish => {
+        const btn = document.createElement('button');
+        btn.textContent = finish.name;
+        btn.onclick = () => applyFinish('#'+id, finish.color);
+        menu.appendChild(btn);
+      });
+      menu.style.display = 'flex';
+    }
+
+    function applyFinish(modelId, color){
+      const model = document.querySelector(modelId);
+      const mesh = model.getObject3D('mesh');
+      if (!mesh) return;
+
+      mesh.traverse(node => {
+        if (node.isMesh) {
+          node.material.color = new THREE.Color(color);
+          node.material.needsUpdate = true;
+        }
+      });
+      menu.style.display = 'none';
+    }
+
+    // Door open/close
+    AFRAME.registerComponent("door-listener", {
+      init: function () {
+        let door = this.el;
+        let isOpen = false;
+        door.addEventListener("click", function () {
+          if (!isOpen) {
+            door.setAttribute("animation", {
+              property: "rotation",
+              to: "0 -90 0",
+              dur: 1000,
+              easing: "easeInOutQuad",
+            });
+            isOpen = true;
+          } else {
+            door.setAttribute("animation", {
+              property: "rotation",
+              to: "0 0 0",
+              dur: 1000,
+              easing: "easeInOutQuad",
+            });
+            isOpen = false;
+          }
+        });
+      },
+    });
+  </script>
+</body>
+</html>
